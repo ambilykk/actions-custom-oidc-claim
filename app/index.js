@@ -7,15 +7,13 @@ const github = require('@actions/github');
 const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
 const octokit = github.getOctokit(GITHUB_TOKEN);
 
-// inputs defined in action metadata file
-const owner = github.context.repository.owner;
-const repo = github.context.repository.repo;
+
 const url = '/repos/{owner}/{repo}/actions/oidc/customization/sub';
 
 async function run() {
     await octokit.request({
-        owner,
-        repo,
+        owner: github.context.repo.owner,
+        repo: github.context.repo.repo,
         url,
         method: 'PUT',
         use_default: false,
