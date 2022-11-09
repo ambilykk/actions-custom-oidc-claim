@@ -1,0 +1,23 @@
+{
+  "name": "azure-oidc-custom-claim",
+  "version": "1.0.0",
+  "description": "Custom claim setting for a repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techrill88/azure-oidc-custom-claim.git"
+  },
+  "author": "ambilykk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techrill88/azure-oidc-custom-claim/issues"
+  },
+  "homepage": "https://github.com/techrill88/azure-oidc-custom-claim#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}

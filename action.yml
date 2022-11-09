@@ -1,0 +1,13 @@
+name: 'Azure OIDC Custom Claim'
+description: 'Setting custom claim for a repository'
+branding:
+  icon: 'download'
+  color: 'purple'
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token'
+    required: true 
+
+runs:
+  using: 'node16'
+  main: 'app/index.js'
