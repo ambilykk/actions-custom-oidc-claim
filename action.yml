@@ -1,8 +1,8 @@
 name: 'Azure OIDC Custom Claim'
 description: 'Setting custom claim for a repository'
 branding:
-  icon: 'download'
-  color: 'purple'
+  icon: 'anchor'
+  color: 'gray-dark'
 inputs:
   GITHUB_TOKEN:
     description: 'GitHub token'
