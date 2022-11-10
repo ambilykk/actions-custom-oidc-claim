@@ -1,5 +1,5 @@
 {
-  "name": "azure-oidc-custom-claim",
+  "name": "actions-custom-oidc-claim",
   "version": "1.0.0",
   "description": "Custom claim setting for a repository",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/techrill88/azure-oidc-custom-claim.git"
+    "url": "git+https://github.com/ambilykk/actions-custom-oidc-claim.git"
   },
   "author": "ambilykk",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/techrill88/azure-oidc-custom-claim/issues"
+    "url": "https://github.com/ambilykk/actions-custom-oidc-claim/issues"
   },
-  "homepage": "https://github.com/techrill88/azure-oidc-custom-claim#readme",
+  "homepage": "https://github.com/ambilykk/actions-custom-oidc-claim#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1"
