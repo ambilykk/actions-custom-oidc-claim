@@ -1,5 +1,5 @@
-name: 'Azure OIDC Custom Claim'
-description: 'Setting custom claim for a repository'
+name: 'Actions Custom OIDC Claim'
+description: 'Setting custom Actions OpenID Connect(OIDC) subject claim for a repository'
 branding:
   icon: 'anchor'
   color: 'gray-dark'
