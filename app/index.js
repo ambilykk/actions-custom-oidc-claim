@@ -11,17 +11,18 @@ const octokit = github.getOctokit(GITHUB_TOKEN);
 const url = '/repos/{owner}/{repo}/actions/oidc/customization/sub';
 
 async function run() {
-    await octokit.request({
+    const response= await octokit.request({
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
         url,
         method: 'PUT',
         use_default: false,
         include_claim_keys: [
-            'owner',
             'repo'
         ]
     });
+
+    console.log(response);
 }
 
 run();
