@@ -13,6 +13,7 @@ Include the ations-custom-oidc-claim action in your workflow.
 Current version supports only the 'repo' claim key. Will include the list of supported claim keys as an input to scatter to multiple scenarios
 
 Current claim key. -> **repo:{orgname}/{reponame}**
+
 Ensure to edit the sub definition in target Idp to match the subject claim passed form GitHub
 
 ```
