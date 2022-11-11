@@ -51,7 +51,7 @@ jobs:
 ## Parameters
 
 | Name                           | Required  | Default Value | Description                                           |
-|--------------------------------|-----------I---------------|-------------------------------------------------------|
+|--------------------------------|-----------|---------------|-------------------------------------------------------|
 | GITHUB_TOKEN                 | Yes |  | PAT Token for access    |
 | org-repo                      | No | repo | Specify the scope of the subject claim - repo or org                  |
 | claim-keys                     | No | repo | Comma separated list of claim keys      |
