@@ -7,6 +7,15 @@ inputs:
   GITHUB_TOKEN:
     description: 'GitHub token'
     required: true 
+  org-repo:
+    description: 'OIDC claim for organization or repository'    
+    default: 'repo'
+  claim-keys: 
+    description: 'Comma separated list of claim keys'    
+    default: 'repo'
+  use-default: 
+    description: 'Use the default OIDC claim subject'
+    default: false
 
 runs:
   using: 'node16'
