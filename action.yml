@@ -6,14 +6,18 @@ branding:
 inputs:
   GITHUB_TOKEN:
     description: 'GitHub token'
-    required: true 
+    required: true
   org-repo:
-    description: 'OIDC claim for organization or repository'    
-    default: 'repo'
-  claim-keys: 
-    description: 'Comma separated list of claim keys'    
-    default: 'repo'
-  use-default: 
+    type: choice
+    description: 'OIDC claim for organization or repository'
+    options:
+      - org
+      - repo
+  claim-keys:
+    description: 'Comma separated list of claim keys'
+    default: 'repo, context'
+  use-default:
+    type: boolean
     description: 'Use the default OIDC claim subject'
     default: false
 
