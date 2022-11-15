@@ -31,7 +31,7 @@ async function run() {
                 include_claim_keys: use_default? ['repo', 'context'] : claim_keys.split(',').map(item => item.trim())
             }
         }
-        else if (org_repo == 'repo') {
+        else {
             // set the claim keys for repository 
             req_body = {
                 owner: github.context.repo.owner,
