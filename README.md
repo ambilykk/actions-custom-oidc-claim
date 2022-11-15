@@ -54,7 +54,7 @@ jobs:
 |--------------------------------|-----------|---------------|-------------------------------------------------------|
 | GITHUB_TOKEN                 | Yes |  | PAT Token for access    |
 | org-repo                      | No | repo | Specify the scope of the subject claim - repo or org                  |
-| claim-keys                     | No | repo, context | Comma separated list of claim keys      |
+| claim-keys                     | No | repo, context | Comma separated list of claim keys. Supported claim keys - ["sub","aud","exp","iat","iss","jti","nbf", "ref","repository","repository_id","repository_owner","repository_owner_id","run_id", "run_number","run_attempt","actor","actor_id","workflow","head_ref","base_ref","event_name", "ref_type","environment","environment_node_id","job_workflow_ref","repository_visibility", "context"]  <ul><li>the maximum size of claim-keys can be 512 characters</li><li>claim key can only contain alphanumeric characters and underscores</li></ul>|
 | use-default                    | No | false | Use the default sub claim format |
 
 
