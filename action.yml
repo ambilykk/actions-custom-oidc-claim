@@ -10,7 +10,7 @@ inputs:
   org-repo:
     type: choice
     description: 'OIDC claim for organization or repository'
-    deafult: repo
+    default: repo
     options:
       - org
       - repo
