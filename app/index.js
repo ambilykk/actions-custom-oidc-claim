@@ -21,31 +21,25 @@ if (org_repo == 'org') {
 async function run() {
     try {
         let req_body = {};
-        // revert back to default subject identifier
-        if (use_default == 'true') {
+
+        // set the claim keys for organization 
+        if (org_repo == 'org') {
             req_body = {
-                "use_default": true
+                org: github.context.repo.owner,
+                url,
+                method: 'PUT',
+                include_claim_keys: use_default? ['repo', 'context'] : claim_keys.split(',').map(item => item.trim())
             }
-        } else {
-            // set the claim keys for organization 
-            if (org_repo == 'org') {
-                req_body = {
-                    org: github.context.repo.owner,
-                    url,
-                    method: 'PUT',
-                    use_default: false,
-                    include_claim_keys: claim_keys.split(',')
-                }
-            } else {
-                // set the claim keys for repository 
-                req_body = {
-                    owner: github.context.repo.owner,
-                    repo: github.context.repo.repo,
-                    url,
-                    method: 'PUT',
-                    use_default: false,
-                    include_claim_keys: claim_keys.split(',')
-                }
+        }
+        else if (org_repo == 'repo') {
+            // set the claim keys for repository 
+            req_body = {
+                owner: github.context.repo.owner,
+                repo: github.context.repo.repo,
+                url,
+                method: 'PUT',
+                use_default,
+                include_claim_keys: use_default? [] : claim_keys.split(',').map(item => item.trim())
             }
         }
         

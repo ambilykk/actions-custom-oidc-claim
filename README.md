@@ -23,7 +23,7 @@ jobs:
            uses: ambilykk/actions-custom-oidc-claim@main
            with:
               GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}  
-              claim-keys: repo,context
+              claim-keys: repo, context
 ```
 
 2: Revert back to the default OIDC subject claim for repository 
@@ -44,7 +44,7 @@ jobs:
            uses: ambilykk/actions-custom-oidc-claim@main
            with:
               GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}  
-              claim-keys: repo,context, repository_owner
+              claim-keys: repo, context, repository_owner
               org-repo: org
 ```
 
@@ -54,7 +54,7 @@ jobs:
 |--------------------------------|-----------|---------------|-------------------------------------------------------|
 | GITHUB_TOKEN                 | Yes |  | PAT Token for access    |
 | org-repo                      | No | repo | Specify the scope of the subject claim - repo or org                  |
-| claim-keys                     | No | repo | Comma separated list of claim keys      |
+| claim-keys                     | No | repo, context | Comma separated list of claim keys      |
 | use-default                    | No | false | Use the default sub claim format |
 
 
