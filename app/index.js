@@ -43,7 +43,6 @@ async function run() {
             }
         }
         
-        console.log(req_body);
         // call the github api to set the claim keys
         const response = await octokit.request(req_body);
         console.log(response);
