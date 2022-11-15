@@ -31,7 +31,7 @@ async function run() {
                 include_claim_keys: use_default? ['repo', 'context'] : claim_keys.split(',').map(item => item.trim())
             }
         }
-        else {
+        else if (org_repo == 'repo')  {
             // set the claim keys for repository 
             req_body = {
                 owner: github.context.repo.owner,
@@ -41,6 +41,10 @@ async function run() {
                 use_default: use_default? true : false,
                 include_claim_keys: use_default? [] : claim_keys.split(',').map(item => item.trim())
             }
+        }
+        else{
+             core.warning(`Input '${org_repo}' is not valid`);
+             return;
         }
         
         // call the github api to set the claim keys
