@@ -38,7 +38,7 @@ async function run() {
                 repo: github.context.repo.repo,
                 url,
                 method: 'PUT',
-                use_default: use_default? true : false,
+                use_default: use_default==true? true : false,
                 include_claim_keys: use_default? [] : claim_keys.split(',').map(item => item.trim())
             }
         }
